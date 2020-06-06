@@ -2,10 +2,10 @@
 package designpatterns.observer;
 import java.util.*;
 
-//Õ½¶Ó¿ØÖÆÖĞĞÄÀà£ºÄ¿±êÀà
+//æˆ˜é˜Ÿæ§åˆ¶ä¸­å¿ƒç±»ï¼šç›®æ ‡ç±»
 public abstract class AllyControlCenter {
-	protected String allyName; //Õ½¶ÓÃû³Æ
-	protected ArrayList<Observer> players = new ArrayList<Observer>(); //¶¨ÒåÒ»¸ö¼¯ºÏÓÃÓÚ´æ´¢Õ½¶Ó³ÉÔ±
+	protected String allyName; //æˆ˜é˜Ÿåç§°
+	protected ArrayList<Observer> players = new ArrayList<Observer>(); //å®šä¹‰ä¸€ä¸ªé›†åˆç”¨äºå­˜å‚¨æˆ˜é˜Ÿæˆå‘˜
 	
 	public void setAllyName(String allyName) {
 		this.allyName = allyName;
@@ -15,18 +15,19 @@ public abstract class AllyControlCenter {
 		return this.allyName;
 	}
 	
-	//×¢²á·½·¨
+	//æ³¨å†Œæ–¹æ³•
 	public void join(Observer obs) {
-		System.out.println(obs.getName() + "¼ÓÈë" + this.allyName + "Õ½¶Ó£¡");
+		System.out.println(obs.getName() + "åŠ å…¥" + this.allyName + "æˆ˜é˜Ÿï¼");
 		players.add(obs);
 	}
 	
-	//×¢Ïú·½·¨
+	//æ³¨é”€æ–¹æ³•
 	public void quit(Observer obs) {
-		System.out.println(obs.getName() + "ÍË³ö" + this.allyName + "Õ½¶Ó£¡");
+		System.out.println(obs.getName() + "é€€å‡º" + this.allyName + "æˆ˜é˜Ÿï¼");
 		players.remove(obs);
 	}
 	
-	//ÉùÃ÷³éÏóÍ¨Öª·½·¨
+	//å£°æ˜æŠ½è±¡é€šçŸ¥æ–¹æ³•
 	public abstract void notifyObserver(String name);
 }
+//éš¾å—
