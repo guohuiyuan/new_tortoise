@@ -26,3 +26,4 @@ public class Client {
 		player1.beAttacked(acc);
 	}
 }
+//ÐÞ¸ÄClient.java
