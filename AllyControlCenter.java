@@ -30,3 +30,5 @@ public abstract class AllyControlCenter {
 	//声明抽象通知方法
 	public abstract void notifyObserver(String name);
 }
+
+//增加tortoise
